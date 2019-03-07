@@ -13,30 +13,34 @@ body {
   }
 }
 
+#small{
+  float:left;
+  width: 66%;
+}
+
+#medium{
+  float:left;
+  width: 33%;
+
+}
+
 @media only screen and (max-width: 300px) {
- #small {
-    display: block;
+ #small, #medium, #large {
+    width: 100%;
   }
- #medium, #large{
-    display: none;
- }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 768px) {
-  #medium {
+ #large{
     display: block;
-  }
-  #small, #large{
-    display: none;
+    width: 100%;
   }
 }
 
 @media only screen and (min-width:768px){
-  #large {
-    display: block;
-  }
-  #small, #medium{
-    display: none;
+  #large, #small, #medium {
+    float: left;
+    width: 33%;
   }
 }
 
@@ -51,4 +55,3 @@ font-size: medium;
 #large{
 font-size: large;
 }
-
