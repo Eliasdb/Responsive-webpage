@@ -13,20 +13,29 @@ body {
   }
 }
 
-@media screen and (min-width: 500px) {
+@media only screen and (max-width: 300px) {
  #small {
-    display: none;
+    display: block;
   }
+ #medium, #large{
+    display: none;
+ }
 }
 
-@media screen and (max-width: 500px) {
+@media only screen and (min-width: 300px) and (max-width: 768px) {
   #medium {
+    display: block;
+  }
+  #small, #large{
     display: none;
   }
 }
 
-@media screen and (max-width:600px){
+@media only screen and (min-width:768px){
   #large {
+    display: block;
+  }
+  #small, #medium{
     display: none;
   }
 }
@@ -43,13 +52,3 @@ font-size: medium;
 font-size: large;
 }
 
-#small {
-  display: flex;
-  flex-grow: 1;
-}
-
-@media (max-width: 768px) {
-  #small {
-    flex-direction: column;
-  }
-}
